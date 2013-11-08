@@ -1,19 +1,11 @@
-# generator-taskmaster [![Build Status](https://secure.travis-ci.org/cyborgspider/generator-taskmaster.png?branch=master)](https://travis-ci.org/cyborgspider/generator-taskmaster)
+# generator-taskmaster
+![](http://i.imgur.com/qshyzKE.jpg)
 
-A generator for [Yeoman](http://yeoman.io).
+A generator for [Yeoman](http://yeoman.io). Out of the box support for Jade, Stylus, Coffeescript, plus some other Grunt plugins.
 
 
 ## Getting Started
-
-### What is Yeoman?
-
-Trick question. It's not a thing. It's this guy:
-
-![](http://i.imgur.com/JHaAlBJ.png)
-
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
-
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
+There's plenty of documentation and tutorials available for Yeoman. Here's a quick rundown:
 
 ```
 $ npm install -g yo
@@ -29,17 +21,15 @@ To install generator-taskmaster from npm, run:
 $ npm install -g generator-taskmaster
 ```
 
-Finally, initiate the generator:
+Finally, initiate the generator within your directory (a blank folder is fine. It will copy and install necessary files):
 
 ```
 $ yo taskmaster
 ```
 
-### Getting To Know Yeoman
-
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
-
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
+### Now What?
+Play around with the Gruntfile to truly customize your site/app. Otherwise, you can just run "grunt build" or "grunt watch"
+and check the contents of the build folder.
 
 
 ## License
