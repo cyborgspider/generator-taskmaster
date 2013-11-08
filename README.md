@@ -1,5 +1,5 @@
-# generator-taskmaster
 ![](http://i.imgur.com/qshyzKE.jpg)
+# generator-taskmaster
 
 A generator for [Yeoman](http://yeoman.io). Out of the box support for Jade, Stylus, Coffeescript, plus some other Grunt plugins.
 
