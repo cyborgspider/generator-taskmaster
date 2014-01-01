@@ -19,10 +19,6 @@ module.exports =function(grunt){
         html:{
           files:   ['site/*.jade'],
           tasks:   ['jade']
-        },
-        img:{
-          files: ['site/images/*'],
-          tasks: ['imagemin']
         }
       },
       coffee:{
@@ -39,14 +35,14 @@ module.exports =function(grunt){
           }
         }
       },
-      // copy: {
-      //   main: {
-      //     expand: true,
-      //     cwd: 'site/',
-      //     src: 'php/*',
-      //     dest: 'build/'
-      //   },
-      // },
+      copy: {
+        main: {
+          expand: true,
+          cwd: 'site/images',
+          src: '*',
+          dest: 'build/img'
+        },
+      },
       stylus:{
         compile: {
           options:{
@@ -69,19 +65,6 @@ module.exports =function(grunt){
             dest:   "build/"
           }]
         }
-      },
-      imagemin:{
-        options: {
-          optimizationLevel: 7
-        },
-        dynamic:{
-          files:[{
-            expand: true,
-            cwd:    'site/images/',
-            src:    ['**/*.{jpg,gif}'],
-            dest:   'build/img/'
-          }]
-        }
       }
      });
 
@@ -97,6 +80,6 @@ module.exports =function(grunt){
 
      //Run the task
      //Copy is registered but not executed. Refer to commented code in the initConfig method for details on how to add it.
-     grunt.registerTask('default', ['watch','coffee', 'uglify', 'stylus', 'jade', 'imagemin']);
-     grunt.registerTask('build', ['coffee', 'uglify', 'stylus','jade', 'imagemin']);
+     grunt.registerTask('default', ['watch','coffee', 'uglify', 'stylus', 'jade', 'copy']);
+     grunt.registerTask('build', ['coffee', 'uglify', 'stylus','jade', 'copy']);
 };
