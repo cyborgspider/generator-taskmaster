@@ -10,14 +10,14 @@ module.exports =function(grunt){
         },
         js: {
           files:   ['site/scripts/*.coffee'],
-          tasks:   ['coffee']
+          tasks:   ['coffee','uglify']
         },
         css:{
           files:   ['site/styles/*.styl'],
           tasks:   ['stylus']
         },
         html:{
-          files:   ['site/*.jade'],
+          files:   ['site/*.jade','site/inc/*'],
           tasks:   ['jade']
         }
       },
@@ -37,10 +37,11 @@ module.exports =function(grunt){
       },
       copy: {
         main: {
-          expand: true,
-          cwd: 'site/images',
-          src: '*',
-          dest: 'build/img'
+          files: [
+            {expand: true, cwd: 'site/images', src: '*', dest: 'build/img'},
+            {expand: true, cwd: 'site/lib/css', src: '*', dest: 'build/css'},
+            {expand: true, cwd: 'site/lib/js', src: '*', dest: 'build/js'}
+          ]
         },
       },
       stylus:{
