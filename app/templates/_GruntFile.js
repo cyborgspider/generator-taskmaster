@@ -66,6 +66,12 @@ module.exports =function(grunt){
             dest:   "build/"
           }]
         }
+      },
+      'gh-pages': {
+        options: {
+          base: 'build'
+        },
+        src: ['**']
       }
      });
 
