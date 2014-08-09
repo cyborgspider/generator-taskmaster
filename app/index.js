@@ -42,19 +42,19 @@ TaskmasterGenerator.prototype.askFor = function askFor() {
 };
 
 TaskmasterGenerator.prototype.app = function app() {
-  this.mkdir('site');
-  this.mkdir('site/styles');
-  this.mkdir('site/scripts');
-  this.mkdir('site/images');
+  this.mkdir('src');
+  this.mkdir('src/styles');
+  this.mkdir('src/scripts');
+  this.mkdir('src/images');
 
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
   this.copy('_GruntFile.js', 'GruntFile.js');
   this.copy('_gitignore', '.gitignore');
 
-  this.copy('_script.coffee', 'site/scripts/scripts.coffee');
-  this.copy('_style.styl', 'site/styles/styles.styl');
-  this.template('_index.jade', 'site/index.jade');
+  this.copy('_script.coffee', 'src/scripts/scripts.coffee');
+  this.copy('_style.styl', 'src/styles/styles.styl');
+  this.template('_index.jade', 'src/index.jade');
 };
 
 // TaskmasterGenerator.prototype.projectfiles = function projectfiles() {
