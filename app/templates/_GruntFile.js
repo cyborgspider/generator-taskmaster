@@ -9,22 +9,22 @@ module.exports =function(grunt){
           livereload: true
         },
         js: {
-          files:   ['site/scripts/*.coffee'],
+          files:   ['src/scripts/*.coffee'],
           tasks:   ['coffee','uglify']
         },
         css:{
-          files:   ['site/styles/*.styl'],
+          files:   ['src/styles/*.styl'],
           tasks:   ['stylus']
         },
         html:{
-          files:   ['site/*.jade','site/inc/*'],
+          files:   ['src/*.jade','src/inc/*'],
           tasks:   ['jade']
         }
       },
       coffee:{
         compile: {
             files: {
-              'build/js/scripts.js': ['site/scripts/*.coffee'] // compile and concat into single file
+              'build/js/scripts.js': ['src/scripts/*.coffee'] // compile and concat into single file
             }
           }
       },
@@ -38,9 +38,9 @@ module.exports =function(grunt){
       copy: {
         main: {
           files: [
-            {expand: true, cwd: 'site/images', src: '*', dest: 'build/img'},
-            {expand: true, cwd: 'site/lib/css', src: '*', dest: 'build/css'},
-            {expand: true, cwd: 'site/lib/js', src: '*', dest: 'build/js'}
+            {expand: true, cwd: 'src/images', src: '*', dest: 'build/img'},
+            {expand: true, cwd: 'src/lib/css', src: '*', dest: 'build/css'},
+            {expand: true, cwd: 'src/lib/js', src: '*', dest: 'build/js'}
           ]
         },
       },
@@ -50,7 +50,7 @@ module.exports =function(grunt){
             import:['nib']
           },
           files: {
-            'build/css/styles.css': ['site/styles/*.styl'] // compile and concat into single file
+            'build/css/styles.css': ['src/styles/*.styl'] // compile and concat into single file
           }
         }
 
@@ -60,7 +60,7 @@ module.exports =function(grunt){
           options: {pretty:true},
           files:[{
             expand: true,
-            cwd:    'site/',
+            cwd:    'src/',
             src:    "*.jade",
             ext:    ".html",
             dest:   "build/"
