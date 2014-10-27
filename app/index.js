@@ -53,7 +53,9 @@ TaskmasterGenerator.prototype.app = function app() {
   this.copy('_gitignore', '.gitignore');
 
   this.copy('_script.coffee', 'src/scripts/scripts.coffee');
+  this.copy('_script.js', 'src/scripts/scripts.js');
   this.copy('_style.styl', 'src/styles/styles.styl');
+  this.copy('_style.scss', 'src/styles/styles.scss');
   this.template('_index.jade', 'src/index.jade');
 };
 
